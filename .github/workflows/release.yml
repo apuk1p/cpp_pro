@@ -2,9 +2,7 @@ name: 'C++ CI'
 
 on: [push]
 
-permissions:
-  packages: read
-  pages: read
+permissions: write-all
 
 jobs:
   build:
