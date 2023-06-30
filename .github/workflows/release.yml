@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: ./.github/actions/checkout@v3.2.0
         with:
-          submodules: true
+          fetch-depth: 0
       - run: sudo apt-get update && sudo apt-get install libboost-test-dev -y
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
