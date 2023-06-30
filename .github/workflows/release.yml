@@ -8,10 +8,15 @@ on:
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
+permissions:
+  packages: read
+  pages: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
       - uses: actions/checkout@v2
         with:
           submodules: true
