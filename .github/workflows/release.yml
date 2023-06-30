@@ -27,7 +27,7 @@ jobs:
       - run: cmake --build . --target package
       - name: Create Release
         id: create_release
-        uses: ./.github/actions/create_release@v1.1.1
+        uses: '/github/actions/create_release@v1.1.1'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
